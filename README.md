@@ -14,4 +14,10 @@ This repository will contain detailed instructions and guides on deploying Prair
 - [ ] Scaling up
 - [ ] Scaling out
 
+## Phase 3: Cloud Deployments (not currently planned)
+
+- [ ] Deploying on AWS
+- [ ] Deploying on Azure
+- [ ] Deploying on other hosting providers
+
 **Note: This is a personal project, and not affiliated with PrairieLearn Inc, in any way, please do not reach out to those wonderful folks for support on the instructions here.**
