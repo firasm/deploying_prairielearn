@@ -1,0 +1,2 @@
+FROM prairielearn/prairielearn:latest
+ENV NODE_ENV=production

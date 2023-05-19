@@ -1,0 +1,28 @@
+{
+  "coursesRoot": "pl_courses/",
+  "courseRepoDefaultBranch": "master",
+  "githubClientToken": "REDACTED",
+  "githubCourseOwner": "PrairieLearnUBC",
+  "githubCourseTemplate": "pl-ubco-template",
+  "githubMainBranch": "main",
+  "hasShib" : true,
+  "shibLinkText": "Sign in with UBC CWL",
+  "shibLinkLogo": "/images/ubc_logo.png",
+  "shibLinkColors": {
+  	"normal": { "background": "#002145", "border": "#002145", "text": "white" },
+  	"hover":  { "background": "#0055B7", "border": "#0055B7", "text": "white" },
+  	"active": { "background": "#0055B7", "border": "#0055B7", "text": "white" },
+  	"focus":  { "shadow": "rgba(255, 83, 0, 0.35)" }
+	},
+  "serverCanonicalHost": "https://prairielearn.ok.ubc.ca",
+  "googleClientId": "REDACTED",
+  "googleClientSecret": "REDACTED",
+  "googleRedirectUrl": "https://prairielearn.ok.ubc.ca/pl/oauth2callback",
+  "hasOauth": true,
+  "authType": "x-auth",
+  "postgresqlHost": "REDACTED",
+  "postgresqlDatabase": "REDACTED",
+  "postgresqlUser": "REDACTED",
+  "postgresqlPassword": "REDACTED",
+  "fileEditorUseGit": true
+}

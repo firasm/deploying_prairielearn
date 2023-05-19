@@ -1,0 +1,15 @@
+version: '3'
+services:
+  pl:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - /srv/pl_courses/:/pl_courses/
+      - /srv/prod/config.json:/PrairieLearn/config.json
+      - /srv/.ssh/:/root/.ssh/
+      - /srv/ubc_logo.png:/PrairieLearn/apps/prairielearn/public/images/ubc_logo.png
+
+    restart: always
