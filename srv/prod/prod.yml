@@ -11,5 +11,4 @@ services:
       - /srv/prod/config.json:/PrairieLearn/config.json
       - /srv/.ssh/:/root/.ssh/
       - /srv/ubc_logo.png:/PrairieLearn/apps/prairielearn/public/images/ubc_logo.png
-
     restart: always

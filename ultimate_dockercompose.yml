@@ -1,0 +1,47 @@
+# The skeleton of this was generated using ChatGPT
+
+# OpenAI. (2023, June 6). Make me a docker compose file with Apache, Shibboleth, Postgres, and PrairieLearn [Response to a user query on the ChatGPT model]. ChatGPT. Retrieved from https://www.openai.com
+
+# Please note that OpenAI is the organization behind the development of ChatGPT, and the specific date of the response should be included as well.
+
+version: '3'
+services:
+  apache:
+    image: httpd:2.4
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./apache-config:/usr/local/apache2/conf
+    depends_on:
+      - shibboleth
+
+  shibboleth:
+    image: shibboleth-sp
+    ports:
+      - 443:443
+    volumes:
+      - ./shibboleth-config:/etc/shibboleth
+      - ./shibboleth-credentials:/opt/shibboleth-idp/credentials
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+
+  pl:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - /srv/pl_courses/:/pl_courses/
+      - /srv/prod/config.json:/PrairieLearn/config.json
+      - /srv/.ssh/:/root/.ssh/
+      - /srv/ubc_logo.png:/PrairieLearn/apps/prairielearn/public/images/ubc_logo.png
+    restart: always
